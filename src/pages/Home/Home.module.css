@@ -1,0 +1,24 @@
+.ctaContainer {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../assets/CTAIMg.png') no-repeat center center;
+  background-size: cover;
+  gap: 16px;
+}
+
+.ctaContainer h2 {
+  font-size: clamp(32px, 5vw, 64px); 
+  color: white;
+  margin-bottom: 16px;
+}
+
+.ctaContainer p {
+  font-size: clamp(16px, 2.5vw, 24px); 
+  color: white;
+  margin-bottom: 32px;
+}
+.ctaButton { padding: 16px 32px; font-size: 18px; font-weight: 600; color: white; background-color: #FF8C38; border-radius: 8px; text-decoration: none; }
