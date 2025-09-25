@@ -1,0 +1,14 @@
+import { Link } from 'react-router-dom';
+import styles from './Home.module.css';
+
+function Home() {
+  return (
+      <section className={styles.ctaContainer}>
+            <h1>You got the travel plans, we got the travel vans.</h1>
+            <p>Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.</p>
+            <Link className={styles.ctaButton} to="vans">Find your van</Link>
+      </section>
+  )
+}
+
+export default Home;    
