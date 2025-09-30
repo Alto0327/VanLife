@@ -13,7 +13,7 @@ export default function Vans(){
     return (
         <>
             {vans.map((van) =>(
-                <div>
+                <div key={van.id}>
                     <h2>{van.name}</h2>
                     <p>${van.price}</p>
                     <img src={van.imageUrl} alt={van.name} />
