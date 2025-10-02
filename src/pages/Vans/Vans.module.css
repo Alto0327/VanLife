@@ -1,0 +1,62 @@
+.vanContainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px;
+}
+
+.van{
+    display: flex;
+    flex-direction: column;
+    width: 32vw;
+    padding: 24px;
+}
+.vanInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title, .price {
+    font-weight: 700;
+}
+
+.img{
+    width: 100%;
+    height: fit-content;
+}
+
+.description{
+    display: none;
+}
+.type{
+    width:84px ;
+    height: 34px;
+    text-align: center;
+    padding: 6px 12px;
+    font-style: normal;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFEAD0;
+    color: #4D4D4D;
+    transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.type:hover {
+    color: #FFEAD0;
+}
+
+.type:focus {
+    outline: none;
+}
+
+.simple:hover, .simple.selected {
+    background-color: #E17654;
+}
+
+.rugged:hover, .rugged.selected {
+    background-color: #115E59;
+}
+
+.luxury:hover, .luxury.selected {
+    background-color: #161616;
+}
