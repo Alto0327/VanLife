@@ -60,3 +60,17 @@
 .luxury:hover, .luxury.selected {
     background-color: #161616;
 }
+
+.loadingPlaceholder {
+    min-height: 70vh; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 24px; 
+}
+
+.loadingPlaceholder h1 {
+    margin: 0;
+}

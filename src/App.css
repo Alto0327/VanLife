@@ -1,4 +1,18 @@
 
+:root {
+    /* Based on your .nav-bar CSS: min-height: 10vh; and padding: 24px 60px; */
+    /* Since 10vh is the minimum, we'll use a safe, slightly larger value for the calculation */
+    --header-height: 10vh; 
+    --footer-height: 0px; 
+}
+
+
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 .nav-bar {
   width: 100vw;
@@ -30,3 +44,18 @@
 }
 
 
+/* Add this to your App.css */
+.main-content-area {
+    /* This calculation ensures the content area fills the remaining space */
+    min-height: calc(100vh - var(--header-height) - var(--footer-height)); 
+    
+    /* The second min-height is often redundant when using the calc() above, 
+       but if you want to ensure a very large area even on a small screen: */
+    /* min-height: 500px; */ /* REMOVE this line if you only want the dynamic height */
+
+    /* Ensure content stacks normally, preventing unwanted vertical centering */
+    display: block; 
+    
+    /* Add padding/margin to match your overall layout */
+    padding-bottom: 50px; /* Example to give space above the (assumed) footer */
+}

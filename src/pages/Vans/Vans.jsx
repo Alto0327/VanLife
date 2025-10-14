@@ -5,13 +5,19 @@ import { Link } from "react-router-dom";
 
 export default function Vans(){
     const [vans, setVans] = React.useState([])
+    const [loading, setLoading] = React.useState(true)
     useEffect(() => {
         fetch("/api/vans")
             .then(res => res.json())
-            .then(data => setVans(data.vans))            
+            .then(data => setVans(data.vans))     
+            setLoading(false)       
     }
     , [])
     
+    if (loading) {
+        return <h1 className={styles.loadingPlaceholder}>Loading vans...</h1> 
+    }
+
     return (
         <>
             <h1>Explore our van options</h1>
