@@ -59,3 +59,20 @@ html, body, #root {
     /* Add padding/margin to match your overall layout */
     padding-bottom: 50px; /* Example to give space above the (assumed) footer */
 }
+
+.host-nav {
+    display: flex;
+}
+
+.host-nav a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 500;
+    padding: 5px 20px;
+}
+
+.host-nav a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: 600;
+}
