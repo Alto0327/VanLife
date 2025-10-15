@@ -8,8 +8,8 @@ import VanDetail from './pages/Vans/VanDetail/VanDetail';
 import './App.css';
 import Layout from './components/Layout';
 import Host from './pages/Host/Host';
-import HostReview from './pages/Host/HostReview';
-import HostIncome from './pages/Host/HostIncome';
+import Review from './pages/Host/HostReview';
+import Income from './pages/Host/HostIncome';
 
 import "./server"
 
@@ -24,9 +24,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
           <Route path="/vans/:id" element={<VanDetail />} />
-          <Route path="/host" element={ <Host/> } />
-          <Route path="/host/income" element={ <HostIncome/> } />
-          <Route path="/host/reviews" element={ <HostReview/> } />
+          <Route path="/host" element={ <Host/> }>
+            <Route path="/host/income" element={ <Income/> } />
+            <Route path="/host/reviews" element={ <Review/> } />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
