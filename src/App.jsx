@@ -7,7 +7,7 @@ import Vans from './pages/Vans/Vans';
 import VanDetail from './pages/Vans/VanDetail/VanDetail';
 import './App.css';
 import Layout from './components/Layout';
-import Host from './pages/Host/Host';
+import Dashboard from './pages/Host/Dashboard';
 import Review from './pages/Host/HostReview';
 import Income from './pages/Host/HostIncome';
 
@@ -24,7 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
           <Route path="/vans/:id" element={<VanDetail />} />
-          <Route path="/host" element={ <Host/> }>
+          <Route path="/host" element={ <Dashboard/> }>
             <Route path="/host/income" element={ <Income/> } />
             <Route path="/host/reviews" element={ <Review/> } />
           </Route>
