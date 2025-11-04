@@ -9,7 +9,8 @@ export default function Vans(){
     useEffect(() => {
         fetch("/api/vans")
             .then(res => res.json())
-            .then(data => setVans(data.vans))     
+            .then(data => setVans(data.vans)) 
+            console.log(vans)    
             setLoading(false)       
     }
     , [])
