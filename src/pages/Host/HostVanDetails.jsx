@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
 
 export default function HostVansDetail(){
@@ -15,11 +15,19 @@ export default function HostVansDetail(){
     if (!van) return <h2>Loading...</h2>;
 
     return (
-        <div>
-        <img src={van.imageUrl} />
-        <h1>{van.name}</h1>
-        <p>{van.type}</p>
-        <p>${van.price}/day</p>
-        </div>
+        <section>
+            <Link
+                to=".."
+                relative="path"
+                className="back-button"
+            >&larr; <span>Back to all vans</span></Link>
+
+            <div>
+                <img src={van.imageUrl}/>
+                <h1>{van.name}</h1>
+                <p>{van.type}</p>
+                <p>${van.price}/day</p>
+            </div>
+        </section>
     );
 }
