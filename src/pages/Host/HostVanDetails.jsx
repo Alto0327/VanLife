@@ -10,7 +10,7 @@ export default function HostVansDetail(){
         fetch(`/api/host/vans/${id}`)
             .then(response => response.json())
             .then(data => setVan(data.vans[0]))
-        },[])
+        },[id])
 
     if (!van) return <h2>Loading...</h2>;
 
