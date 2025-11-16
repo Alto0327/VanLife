@@ -7,7 +7,7 @@ export default function Layout(){
         <>
             <Header />
             <main className="main-content-area">
-                <Outlet /> {/* This is where your Vans component renders */}
+                <Outlet /> 
             </main>
             <Footer/>
         </>
