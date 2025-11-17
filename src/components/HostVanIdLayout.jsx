@@ -36,25 +36,27 @@ export default function HostVanIdLayout(){
                     <p>{van.type}</p>
                     <p>${van.price}/day</p>
                 </section>
-                <NavLink
-                    to="."
-                    end
-                    style={({ isActive }) => isActive ? activeStyles : null}
-                >
-                    Details
-                </NavLink>
-                 <NavLink
-                    to="pricing"
-                    style={({ isActive }) => isActive ? activeStyles : null}
-                >
-                    Pricing
-                </NavLink>
-                 <NavLink
-                    to="photos"
-                    style={({ isActive }) => isActive ? activeStyles : null}
-                >
-                    Photos
-                </NavLink>
+                <nav>
+                    <NavLink
+                        to="."
+                        end
+                        style={({ isActive }) => isActive ? activeStyles : null}
+                    >
+                        Details
+                    </NavLink>
+                    <NavLink
+                        to="pricing"
+                        style={({ isActive }) => isActive ? activeStyles : null}
+                    >
+                        Pricing
+                    </NavLink>
+                    <NavLink
+                        to="photos"
+                        style={({ isActive }) => isActive ? activeStyles : null}
+                    >
+                        Photos
+                    </NavLink>
+                </nav>
                 <Outlet context={{van}}/>
             </div>
         </div>
