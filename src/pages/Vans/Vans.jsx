@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom"
 import styles from "./Vans.module.css"
 
 export default function Vans() {
-    const [searchParams] = useSearchParams()
+    const [searchParams, setSearchParams] = useSearchParams()
     const [vans, setVans] = React.useState([])
 
     const typeFilter = searchParams.get("type")
@@ -38,11 +38,14 @@ export default function Vans() {
         <>
             <h1>Explore our van options</h1>
             <div className="van-list-filter-buttons">
-                <Link to="?type=simple">Simple</Link>
+                {/* <Link to="?type=simple">Simple</Link>
                 <Link to="?type=luxury">Luxury</Link>
                 <Link to="?type=rugged">Rugged</Link>
-                <Link to=".">Clear Filters</Link>
-            
+                <Link to=".">Clear Filters</Link> */}
+                <button onClick={ ()=> setSearchParams({type: 'simple'})}>Simple</button>
+                <button onClick={ ()=> setSearchParams({type: 'luxury'})}>Luxury</button>
+                <button onClick={ ()=> setSearchParams({type: 'rugged'})}>Rugged</button>
+                <button onClick={ ()=> setSearchParams({})}>Clear Filters</button>
             </div>
             <div className={styles.vanContainer}>
                 {vanElements}
