@@ -62,9 +62,13 @@ export default function Vans() {
             <button onClick={() => handleFilterChange("type", "rugged")}>
                 Rugged
             </button>
-            <button onClick={() => handleFilterChange("type", null)}>
-                Clear filter
-            </button>
+            
+            {typeFilter? 
+                <button onClick={() => handleFilterChange("type", null)}>
+                    Clear filter
+                </button> 
+                : null
+            }
             </div>
             <div className={styles.vanContainer}>
                 {vanElements}
