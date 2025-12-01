@@ -5,7 +5,7 @@ export default function VanDetail() {
     const params = useParams()
     const location = useLocation()
     console.log(location)
-    
+    console.log(location.state.search)
     const [van, setVan] = React.useState(null)
 
     React.useEffect(() => {
@@ -17,7 +17,10 @@ export default function VanDetail() {
     return (
         <div className="van-detail-container">
             <Link
-                to=".."
+                to={{
+                    pathname: "..",
+                    search: location.state?.search || ""
+                }}
                 relative="path"
                 className="back-button"
             >&larr; <span>Back to all vans</span></Link>
